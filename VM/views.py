@@ -2,9 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 #from app1.models import App1,Choice
+from news.models import News
+
 
 def index(request):
-    context = {'index': index}
+    news = News.objects.all().order_by('date_pub')[:5]
+    context = {'news': news}
     return render(request, 'index.html', context)
 
 

@@ -76,8 +76,8 @@
           <ul class="sb_menu">
           {% if news %}
             {% for new in news %}
-            <li class="active"><a href="/news/?????/">{{ new }}</a></li>
-            <li><a href="/news/?????/">{{ new.name }}</a></li>
+            <li class="active"><a href="/news/{{ new.id }}/">{{ new }}</a></li>
+
             {% endfor %}
           {% else %}
               <p>ZZZ</p>

@@ -11,7 +11,7 @@ def NewsAll(request):
     context = {'news': news}
     return render(request, 'news/news.html',context)
 
-def SingleNews(request):
-    news = News.objects.order_by('date_pub')[:5]
+def SingleNews(request, new_id):
+    news = News.objects.get(pk=new_id)
     context = {'news': news}
     return render(request, 'news/singlenews.html',context)

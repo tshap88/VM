@@ -50,13 +50,9 @@
           <div class="clr"></div>
           <p class="post-data"><a href="#" class="com">Comments (3)</a> <span class="date">{{ news.date_pub }}</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
           <ul class="sb_menu">
-              {% if news %}
-            {% for new in news %}
-            <li class="active"><a href="/news/?????/">{{ new }}</a></li>
-            {% endfor %}
-          {% else %}
-              <p>ZZZ</p>
-          {% endif %}
+            <h2><span>{{ news }}</span></h2>
+            <div class="clr"></div>
+            <p>{{ news.contents }}</p>
           </ul>
           <p class="spec"><a href="#" class="rm">Read more</a></p>
           <p></p>
