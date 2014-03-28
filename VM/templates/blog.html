@@ -103,6 +103,19 @@
       </div>
       <div class="sidebar">
         <div class="gadget">
+          <h2 class="star"><a href="/news/"><span>My</span> News!</a></h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+          {% if news_bar %}
+            {% for news_br in news_bar %}
+            <li class="active"><a href="/news/{{ news_br.id }}/">{{ news_br }}</a></li>
+            {% endfor %}
+          {% else %}
+              <p>ZZZ</p>
+          {% endif %}
+          </ul>
+        </div>
+        <div class="gadget">
           <h2 class="star"><span>Sidebar</span> Menu</h2>
           <div class="clr"></div>
           <ul class="sb_menu">
