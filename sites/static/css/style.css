@@ -77,7 +77,7 @@ a.rm, a.com {
 	width:890px;
 }
 .header {
-	background:url(../../static/images/leather_texture1050.jpg);
+	background:url(../../static/images/header_bg.gif);
 }
 .header_resize {
 	margin:0 auto;
@@ -211,7 +211,7 @@ ul.ex_menu li a:hover {
 	float:left;
 }
 .fbg {
-	background:url(../../static/images/leather_texture1050.jpg);
+	background:url(../../static/images/fbg_bg.gif);
 }
 .fbg_resize {
 	padding:24px 20px;

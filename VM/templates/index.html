@@ -51,8 +51,8 @@
             <div class="clr"></div>
             <p class="post-data"><a href="#" class="com">Comments (3)</a> <span class="date">{{ new_mn.date_pub }}</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
             <img src="{% static 'images/images_1.jpg' %}"  width="109" height="138" alt="" class="fl" />
-            <p>{{ new_mn.contents }}</p>
-            <p class="spec"><a href="#" class="rm">Read more</a></p>
+            <p>{{ new_mn.contents|safe|truncatewords:"35" }}</p>
+            <p class="spec"><a href="/news/{{ new_mn.id }}/" class="rm">Read more</a></p>
             <p></p>
             <p></p>
             <p></p>
