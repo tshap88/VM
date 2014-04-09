@@ -10,7 +10,7 @@ from news.models import News
 def index(request):
     now = datetime.datetime.now()
     news = News.objects.all()
-    news_bar = News.objects.all().order_by('date_pub')[len(news)-5:len(news):-1]
+    news_bar = News.objects.all().order_by('date_pub')[len(news)-1:len(news):-1]
     news_mn = News.objects.all().order_by('-date_pub') #[:len(news):-1]#[::-1] #only today
     context =  {'news_bar': news_bar,
                 'news_mn': news_mn

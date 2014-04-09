@@ -46,21 +46,24 @@
     <div class="content_resize">
       <div class="mainbar">
         <div class="article">
-          <h2><span></span></h2>
+          <h2><span>{{ news }}</span></h2>
           <div class="clr"></div>
-          <p class="post-data"><a href="#" class="com">Comments (3)</a> <span class="date">{{ news.date_pub }}</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
-          <ul class="sb_menu">
-            <h2><span>{{ news }}</span></h2>
-            <div class="clr"></div>
-            <p>{{ news.contents|safe }}</p>
-          </ul>
+          <p class="post-data">
+              <span class="date">{{ news.date_pub }}</span>
+              &nbsp;|&nbsp; Posted by {{ news.author }}
+              {% if news.link %}
+              &nbsp;|&nbsp; <a href="{{ news.link }}">Source</a>
+              {% else %}
+              {% endif %}
+              &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+
+          <p>{{ news.contents|safe }}</p>
           <p></p>
           <p></p>
           <p></p>
           <p></p>
           <p></p>
         </div>
-        <div class="pagenavi"><span class="pages">Page 1 of 2</span><span class="current">1</span><a href="#">2</a><a href="#" >&raquo;</a></div>
       </div>
       <div class="sidebar">
         <div class="gadget">

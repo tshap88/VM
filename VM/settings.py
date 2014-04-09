@@ -34,7 +34,8 @@ STATIC_ROOT = ' ' #'/home/tania/PycharmProjects/VM/sites/static'
 
 STATIC_URL = '/static/'
 
-ADMIN_MEDIA_PREFIX = '/static/admin/'
+#ADMIN_MEDIA_PREFIX = '/static/admin/'
+ADMIN_MEDIA_PREFIX = '/media-admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -90,7 +91,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'VM',
-	'USER': 'root',
+	    'USER': 'root',
         'PASSWORD': 'sword-fish',
         'HOST': '',
         'PORT': '',

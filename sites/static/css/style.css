@@ -3,8 +3,9 @@ body {
 	margin:0;
 	padding:0;
 	width:100%;
-	color:#959595;
+    color:#595959;
 	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+
 }
 html, .main {
 	padding:0;
@@ -18,6 +19,7 @@ html, .main {
 	width:100%;
 	font-size:0;
 	line-height:0;
+
 }
 .logo {
 	width:300px;
@@ -134,6 +136,7 @@ a.rm, a.com {
 	padding:0;
 	float:left;
 	width:670px;
+
 }
 .mainbar img {
 	padding:4px;
@@ -146,6 +149,7 @@ a.rm, a.com {
 .mainbar .article {
 	margin:0;
 	padding:16px 24px 24px 20px;
+
 }
 .mainbar .post-data a {
 	color:#595959;
@@ -209,6 +213,7 @@ ul.ex_menu li a:hover {
 	margin:10px 16px 0 0;
 	padding:0;
 	float:left;
+
 }
 .fbg {
 	background:url(../../static/images/fbg_bg.gif);

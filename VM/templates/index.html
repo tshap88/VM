@@ -45,20 +45,31 @@
   <div class="content">
     <div class="content_resize">
       <div class="mainbar">
-      {% for new_mn in news_mn %}
+      {% for news1_mn in news_mn %}
           <div class="article">
-            <h2><span>{{ new_mn }}</span></h2>
+            <h2><span>{{ news1_mn }}</span></h2>
             <div class="clr"></div>
-            <p class="post-data"><a href="#" class="com">Comments (3)</a> <span class="date">{{ new_mn.date_pub }}</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
-            <img src="{% static 'images/images_1.jpg' %}"  width="109" height="138" alt="" class="fl" />
-            <p>{{ new_mn.contents|safe|truncatewords:"35" }}</p>
-            <p class="spec"><a href="/news/{{ new_mn.id }}/" class="rm">Read more</a></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p class="post-data"><a href="#" class="com">Comments (3)</a> <span class="date">{{ news1_mn.date_pub }}</span> &nbsp;|&nbsp; Posted by {{ news1_mn.author }} &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+            {% if news1_mn.img_file %}
+                <img src="{{ news1_mn.img_file.url }}"  width="138" height="138" alt="" class="fl" />
+            {% else %}
+
+            {% endif %}
+            <p>{{ news1_mn.contents|safe|truncatewords:"35" }}</p>
+            <p class="spec"><a href="/news/{{ news1_mn.id }}/" class="rm">Read more</a></p>
+            {% if news1_mn.img_file %}
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            {% else %}
+                <p></p>
+                <p></p>
+            {% endif %}
           </div>
       {% endfor %}
-        <div class="pagenavi"><span class="pages">Page 1 of 2</span><span class="current">1</span><a href="#">2</a><a href="#" >&raquo;</a></div>
+        {# <div class="pagenavi"><span class="pages">Page 1 of 2</span><span class="current">1</span><a href="#">2</a><a href="#" >&raquo;</a></div> #}
       </div>
       <div class="sidebar">
         <div class="gadget">
