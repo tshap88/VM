@@ -2,5 +2,8 @@
 .idea/
 *.xml
 *.pyc
+sites/media
+VM/templates/qwer.html
+
 
 
