@@ -4,3 +4,5 @@
 *.pyc
 sites/media/
 VM/templates/qwer.html
+connect/
+connector/
