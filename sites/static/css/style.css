@@ -5,6 +5,11 @@ body {
 	width:100%;
     color:#595959;
 	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
+    background-color: #333;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 
 }
 html, .main {
@@ -26,26 +31,20 @@ html, .main {
 	float:left;
 	padding:0 0 0 20px;
 }
-h1 {
-	margin:0;
-	padding:20px 0;
-	color:#e1e9df;
-	font:bold 40px/1.2em Arial, Helvetica, sans-serif;
-	letter-spacing:-2px;
+h1{
+
+	font-family: 'Boogaloo', cursive;
+	font-size: 3em;
+	color: #fff;
+	text-shadow: 3px 3px 0px #196597 ;
+
 }
-h1 a, h1 a:hover {
-	color:#7b7a7a;
-	text-decoration:none;
+
+
+strong{
+	color: #FFE000;
 }
-h1 span {
-	color:#d76002;
-}
-h1 small {
-	display:block;
-	padding:0;
-	font:normal 13px/1.2em Arial, Helvetica, sans-serif;
-	letter-spacing:normal;
-}
+
 h2 {
 	font:bold 24px Arial, Helvetica, sans-serif;
 	padding:8px 0;
@@ -91,13 +90,15 @@ a.rm, a.com {
 	padding:20px 0;
 }
 .menu_header {
-	background:url(../../static/images/menu_bg.gif);
-	height:50px;
+    background:url(../../static/images/menu_bg.gif);
+    height:50px;
+    margin: 0 auto;
+    width: 970px;
 }
 .menu_nav {
 	margin:0 auto;
-	padding:0 0 0 20px;
-	width:950px;
+	padding:0;
+    width:970px;
 	height:50px;
 }
 .menu_nav ul {
@@ -149,6 +150,7 @@ a.rm, a.com {
 .mainbar .article {
 	margin:0;
 	padding:16px 24px 24px 20px;
+    border:1px solid #b7b7b7;
 
 }
 .mainbar .post-data a {
@@ -165,7 +167,8 @@ a.rm, a.com {
 .sidebar {
 	padding:0;
 	float:right;
-	width:300px;
+	width:298px;
+    border:1px solid #b7b7b7;
 }
 .sidebar .gadget {
 	margin:0;

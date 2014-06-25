@@ -20,21 +20,21 @@ def index(request):
 
 def support(request):
     news = News.objects.all()
-    news_bar = News.objects.all().order_by('date_pub')[len(news)-5:len(news):-1]
+    news_bar = News.objects.all().order_by('date_pub')#[len(news)-5:len(news):-1]
     context =  {'news_bar': news_bar}
     return render(request, 'support.html', context)
 
 
 def about(request):
     news = News.objects.all()
-    news_bar = News.objects.all().order_by('date_pub')[len(news)-5:len(news):-1]
+    news_bar = News.objects.all().order_by('date_pub')#[len(news)-5:len(news):-1]
     context =  {'news_bar': news_bar}
     return render(request, 'about.html', context)
 
 
 def blog(request):
     news = News.objects.all()
-    news_bar = News.objects.all().order_by('date_pub')[len(news)-5:len(news):-1]
+    news_bar = News.objects.all().order_by('date_pub')#[len(news)-5:len(news):-1]
     context =  {'news_bar': news_bar}
     return render(request, 'blog.html', context)
 
@@ -44,3 +44,14 @@ def contact(request):
     news_bar = News.objects.all().order_by('date_pub')[len(news)-5:len(news):-1]
     context =  {'news_bar': news_bar}
     return render(request, 'contact.html', context)
+
+
+def hhh(request):
+
+    context =  {'hhh': hhh}
+    return render(request, 'hhh.html', context)
+
+def jjj(request):
+
+    context =  {'jjj': jjj}
+    return render(request, 'jjj.html', context)

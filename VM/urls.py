@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^blog/$', views.blog, name = 'blog'),
     url(r'^contact/$', views.contact, name = 'contact'),
     url(r'^news/', include('news.urls', namespace = 'news')),
+    url(r'^hhh/$', views.hhh, name = 'hhh'),
+    url(r'^jjj/$', views.jjj, name = 'jjj'),
 
 )
 
