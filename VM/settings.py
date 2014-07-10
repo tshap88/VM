@@ -63,8 +63,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'disqus',
     'news',
+    'django.contrib.sites',
 )
+
+DISQUS_API_KEY = 'ICgFGEuqMakHCxKobko9rGTzMz5x6vD1V7R4hk9T29DxYCmucdw2VD9zWwHdz3YM'
+DISQUS_WEBSITE_SHORTNAME = 'vm4game'
+SITE_ID = 1
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -92,7 +99,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'VM',
 	    'USER': 'root',
-        'PASSWORD': 'sword-fish',
+        'PASSWORD': 'wxyiw370',
         'HOST': '',
         'PORT': '',
 
