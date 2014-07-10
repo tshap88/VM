@@ -5,17 +5,12 @@ body {
 	width:100%;
     color:#595959;
 	font:normal 12px/1.8em Arial, Helvetica, sans-serif;
-    background-color: #333;
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none;
 
 }
 html, .main {
 	padding:0;
 	margin:0;
-	background:#fbfbfb;
+	background:#2d3439;
 }
 .clr {
 	clear:both;
@@ -31,18 +26,25 @@ html, .main {
 	float:left;
 	padding:0 0 0 20px;
 }
-h1{
-
-	font-family: 'Boogaloo', cursive;
-	font-size: 3em;
-	color: #fff;
-	text-shadow: 3px 3px 0px #196597 ;
-
+h1 {
+	margin:0;
+	padding:20px 0;
+	color:#e1e9df;
+	font:bold 40px/1.2em Arial, Helvetica, sans-serif;
+	letter-spacing:-2px;
 }
-
-
-strong{
-	color: #FFE000;
+h1 a, h1 a:hover {
+	color:#7b7a7a;
+	text-decoration:none;
+}
+h1 span {
+	color:#d76002;
+}
+h1 small {
+	display:block;
+	padding:0;
+	font:normal 13px/1.2em Arial, Helvetica, sans-serif;
+	letter-spacing:normal;
 }
 
 h2 {
@@ -94,22 +96,26 @@ a.rm, a.com {
     height:50px;
     margin: 0 auto;
     width: 970px;
+
 }
 .menu_nav {
 	margin:0 auto;
 	padding:0;
     width:970px;
 	height:50px;
+
 }
 .menu_nav ul {
 	list-style:none;
 	height:50px;
+
 }
 .menu_nav ul li {
 	margin:0;
 	padding:0 5px 0 0;
 	float:left;
 	background:url(../../static/images/menu_line.gif) no-repeat right center;
+
 }
 .menu_nav ul li a {
 	display:block;
@@ -123,14 +129,17 @@ a.rm, a.com {
 .menu_nav ul li.active a, .menu_nav ul li a:hover {
 	color:#f8f8f8;
 	background:url(../../static/images/menu_hover.gif) repeat-x center;
+
+
 }
 .content {
 	margin-bottom:12px;
 }
 .content_resize {
 	margin:0 auto;
-	padding:16px 0 0;
+	padding:0 0 0;
 	width:970px;
+    background:#fbfbfb;
 }
 .mainbar {
 	margin:0;
@@ -150,8 +159,14 @@ a.rm, a.com {
 .mainbar .article {
 	margin:0;
 	padding:16px 24px 24px 20px;
-    border:1px solid #b7b7b7;
 
+}
+
+.article2 {
+    padding: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-bottom: 1px solid #b7b7b7
 }
 .mainbar .post-data a {
 	color:#595959;
@@ -168,7 +183,7 @@ a.rm, a.com {
 	padding:0;
 	float:right;
 	width:298px;
-    border:1px solid #b7b7b7;
+
 }
 .sidebar .gadget {
 	margin:0;
@@ -200,6 +215,7 @@ ul.sb_menu li a:hover, ul.ex_menu li a:hover, ul.sb_menu li.active a, ul.ex_menu
 	color:#d76002;
 	font-weight:bold;
 	background:url(../../static/images/menu_hover.gif) no-repeat left center;
+
 }
 ul.sb_menu li a:hover {
 	text-decoration:underline;
