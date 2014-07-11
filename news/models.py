@@ -9,6 +9,7 @@ from django.utils import timezone
 # Create your models here.
 class News(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.SlugField('slug')
     date_pub = models.DateTimeField('date published')
     contents = models.TextField(blank=True)
     author = models.CharField(max_length=200)

@@ -11,8 +11,8 @@ def NewsAll(request):
     context = {'news': news}
     return render(request, 'news/news.html',context)
 
-def SingleNews(request, new_id):
-    news = News.objects.get(pk=new_id)
+def SingleNews(request, ar_slug):
+    news = News.objects.get(slug = ar_slug)
     context = {'news': news}
     return render(request, 'news/singlenews.html',context)
 
