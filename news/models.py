@@ -1,11 +1,10 @@
-import os
-import urllib
 import urllib2
 import urlparse
 from django.core.files.base import ContentFile
 from django.db import models
-import datetime
-from django.utils import timezone
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
+
 # Create your models here.
 class News(models.Model):
     name = models.CharField(max_length=200)
@@ -31,3 +30,9 @@ class News(models.Model):
                 save=False
             )
         super(News, self).save()
+
+@receiver(post_delete, sender=News)
+def mews_post_delete_handler(sender, **kwargs):
+        news = kwargs['instance']
+        storage, path = news.img_file.storage, news.img_file.path
+        storage.delete(path)
