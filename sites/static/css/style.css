@@ -81,11 +81,13 @@ a.rm, a.com {
 }
 .header {
 	background:url(../../static/images/header_bg.gif);
+
 }
 .header_resize {
 	margin:0 auto;
 	padding:0;
 	width:970px;
+
 }
 .hbg {
 	width:970px;
@@ -94,8 +96,7 @@ a.rm, a.com {
 .menu_header {
     background:url(../../static/images/menu_bg.gif);
     height:50px;
-    margin: 0 auto;
-    width: 970px;
+
 
 }
 .menu_nav {
@@ -180,7 +181,8 @@ a.rm, a.com {
 	padding:10px;
 }
 .sidebar {
-	padding:0;
+	margin:0;
+    padding:0;
 	float:right;
 	width:298px;
 
@@ -383,9 +385,18 @@ ol li .send {
 	float:left;
 }
 .table {
-    margin:0 auto;
+    margin:15px;
 	padding:0;
-    width: 728px;
-    height: 90px;
+    width: 160px;
+    height: 600px;
     border: 1px solid #b7b7b7;
+    float: left;
+}
+.table1 {
+    margin:15px;
+	padding:0;
+    width: 160px;
+    height: 600px;
+    border: 1px solid #b7b7b7;
+    float: right;
 }
