@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from news.models import News
 
 def Last5News(request):
@@ -12,7 +12,7 @@ def NewsAll(request):
     return render(request, 'news/news.html',context)
 
 def SingleNews(request, ar_slug):
-    news = News.objects.get(slug = ar_slug)
+    news = get_object_or_404(News, slug = ar_slug)
     context = {'news': news}
     return render(request, 'news/singlenews.html',context)
 
