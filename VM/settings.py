@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf import settings
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -21,7 +23,6 @@ SECRET_KEY = 'bv8kcy9-2*=ixe*jd+ha*u+i7zu7yodn=6sd)yj!+&2xx#gkkw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -30,10 +31,14 @@ MEDIA_ROOT = '/home/tania/PycharmProjects/VM/sites/media/'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = ' ' #'/home/tania/PycharmProjects/VM/sites/static'
+STATIC_ROOT = ' '#'/home/tania/PycharmProjects/VM//sites/static/'
 
 STATIC_URL = '/static/'
 
+DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
+MEDIA_ROOT = getattr(settings, "FILEBROWSER_MEDIA_ROOT", settings.MEDIA_ROOT)
+MEDIA_URL = getattr(settings, "FILEBROWSER_MEDIA_URL", settings.MEDIA_URL)
+FILEBROWSER_DIRECTORY = MEDIA_ROOT
 #ADMIN_MEDIA_PREFIX = '/static/admin/'
 ADMIN_MEDIA_PREFIX = '/media-admin/'
 
@@ -57,6 +62,8 @@ STATICFILES_FINDERS = (
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
+    'filebrowser',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
