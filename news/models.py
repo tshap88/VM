@@ -19,7 +19,7 @@ class News(models.Model):
     def __unicode__(self):
         return self.name
 
-    def save(self):
+    def save(self, *args, **kwargs):
         if self.img_url:
             image_data = urllib2.urlopen(self.img_url, timeout=5)
             filename = urlparse.urlparse(image_data.geturl()).path.split('/')[-1]
@@ -29,7 +29,7 @@ class News(models.Model):
                 ContentFile(image_data.read()),
                 save=False
             )
-        super(News, self).save()
+        super(News, self).save(*args, **kwargs)
 
 @receiver(post_delete, sender=News)
 def mews_post_delete_handler(sender, **kwargs):
