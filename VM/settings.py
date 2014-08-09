@@ -19,7 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bv8kcy9-2*=ixe*jd+ha*u+i7zu7yodn=6sd)yj!+&2xx#gkkw'
+with open('/home/tania/PycharmProjects/VM/properties.txt') as f:
+    SECRET_KEY = f.readline().strip()
+    DISQUS_API_KEY = f.readline().strip()
+    DISQUS_WEBSITE_SHORTNAME = f.readline().strip()
+
+
+SITE_ID = 1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,11 +81,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 
-DISQUS_API_KEY = 'ICgFGEuqMakHCxKobko9rGTzMz5x6vD1V7R4hk9T29DxYCmucdw2VD9zWwHdz3YM'
-DISQUS_WEBSITE_SHORTNAME = 'vm4game'
-SITE_ID = 1
-
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -104,12 +105,9 @@ TEMPLATE_DIRS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'VM',
-	    'USER': 'root',
-        'PASSWORD': 'wxyiw370',
-        'HOST': '',
-        'PORT': '',
-
+        'OPTIONS': {
+            'read_default_file': '~/PycharmProjects/VM/my.cnf',
+        },
     }
 }
 
